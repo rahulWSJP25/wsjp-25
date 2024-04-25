@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{
+            width: 1000px;
+            height: 500px;
+            border: 1px red solid;
+            margin: auto;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move{
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top:400px;
+                left: 0;
+                background-color: darkgoldenrod;
+            }
+            50%{
+                top: 400px;
+                left: 900px;
+                background-color: darkmagenta;
+            }
+            75%{
+                top: 0;
+                left: 900px;
+                background-color: brown;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{
+            width: 1000px;
+            height: 500px;
+            border: 1px black solid;
+        }
+        .box{
+            width: 200px;
+            height: 50px;
+            background: red;
+            margin: 20px 0;
+            animation: race 10s infinite;
+            color: white;
+            font-size: 20px;
+        }
+        @keyframes race{
+            /* first method */
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(800px);
+            }
+
+            /* ---second method---
+
+             0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(800px);
+            }  */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box" style="animation-timing-function:ease ;">ease</div>
+        <div class="box" style="animation-timing-function:linear ;">linear</div>
+        <div class="box" style="animation-timing-function:ease-in ;">ease-in</div>
+        <div class="box" style="animation-timing-function:ease-out ;">ease-out</div>
+        <div class="box" style="animation-timing-function:ease-in-out ;">ease-in-out</div>
+    </div>
+    
+</body>
+</html>

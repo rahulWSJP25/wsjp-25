@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 500px;
+            height: 400px;
+            border: 1px black solid;
+            margin: 10px auto;
+            box-shadow: 0px 0px 2px gray;
+            position: relative;
+            overflow: hidden;
+        }
+        .overlay{
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            transition: 1s;
+        }
+        .left{
+            background-color: rgba(244, 243, 100, 0.6);
+            top: 0;
+            left: -100%;
+        }
+        .right{
+            background-color: rgba(144, 133, 200, 0.6);
+            top: 0;
+            right: -100%;
+        }
+        .box:hover .left{
+            left: 0;
+        }
+        .box:hover .right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://picsum.photos/seed/picsum/500/400" alt="">
+        <div class="overlay left"></div>
+        <div class="overlay right"></div>
+    </div>
+    
+</body>
+</html>

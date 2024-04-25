@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{
+            width: 1200px;
+            border: 1px black solid;
+            margin: auto;
+            display: flex;
+        }
+        .item{
+            width: 300px;
+            padding: 5px;
+            box-sizing: border-box;
+            transition: 1s;
+            flex-shrink: 1;
+            /* 
+            flex-shrink has two values 0 and 1
+
+            flex-shrink: 1(default)
+            flex-shrink:0
+            
+            */
+        }
+        .item:hover{
+            flex-shrink: 0;
+        }
+        .item img{
+            width: 100%;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=2" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=3" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=4" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=5" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=6" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=7" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background: black;
+            overflow: hidden;
+        }
+        .parent{
+            width: 600px;
+            height: 600px;
+            margin: 30px auto;
+            padding: 10px;
+        }
+        .orbit{
+            width: 100%;
+            height: 100%;
+            border: 1px white solid;
+            border-radius: 50%;
+            position: relative;
+            animation: orbit  infinite linear;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .orbit1{
+            animation-duration: 15s;
+        }
+        .orbit2{
+            animation-duration: 40s;
+        }
+        .orbit3{
+            animation-duration: 30s;
+        }
+        .orbit4{
+            animation-duration: 70s;
+        }
+        .orbit5{
+            animation-duration: 45s;
+        }
+        .orbit6{
+            animation-duration: 120s;
+        }
+        .orbit7{
+            animation-duration: 60s;
+        }
+        .orbit8{
+            animation-duration: 145s;
+        }
+        @keyframes orbit{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .planet{
+            width: 40px;
+            height: 40px;
+            background: orange;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .planet1{
+            background-color: #5b5ddf;
+            top: 170px;
+            left: 0;
+        }
+        .planet2{
+            background-color: #ACE5EE;
+            top: 85px;
+            left: 35px;
+        }
+        .planet3{
+            background: #5b5ddf;
+            top: 120px;
+            left: 0px;
+        }
+        .planet4{
+            background-color: #a59186;
+            top: 180px;
+            left: -15px;
+        }
+        .planet5{
+            background-color: #c1440e;
+            top: 230px;
+            left: 0px;
+        }
+        .planet6{
+            background-color: #4f4cb0;
+            top: 50px;
+            left: 0px;
+        }
+        .planet7{
+            background-color: #f8e2b0;
+            top: 100px;
+            left: -15px;
+        }
+        .planet8{
+            background-color: #B7B8B9;
+            top: 10px;
+            left: 5px;
+        }
+        .sun{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            top: 310px;
+            left: 765px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="sun"></div>
+        <div class="orbit orbit1">
+            <div class="planet planet1"></div>
+            <div class="orbit orbit2">
+                <div class="planet planet2"></div>
+                <div class="orbit orbit3">
+                    <div class="planet planet3"></div>
+                    <div class="orbit orbit4">
+                        <div class="planet planet4"></div>
+                        <div class="orbit orbit5">
+                            <div class="planet planet5"></div>
+                            <div class="orbit orbit6">
+                                <div class="planet planet6"></div>
+                                <div class="orbit orbit7">
+                                    <div class="planet planet7"></div>
+                                    <div class="orbit orbit8">
+                                        <div class="planet planet8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

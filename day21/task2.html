@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box,.box3{
+            width: 300px;
+            height: 300px;
+            border: 1px red solid;
+            transition: 1s;
+            position: relative;
+            overflow: hidden;
+        }
+        .images{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+            transform-origin: top left;
+
+        }
+        .box:hover .images{
+            transform: rotate(90deg);
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 2px red solid;
+            transition: 5s;
+            transform-style: preserve-3d;
+        }
+        .box2:hover{
+            transform: rotateY(360deg);
+        }
+        .box2 h1{
+            transform: translateZ(200px);
+        }
+        .overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            transition: 1s;
+        }
+        .red{
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        .blue{
+            background-color: rgba(0, 0, 255, 0.2);
+            transition-delay: 0.5s;
+        }
+        .box3:hover .red{
+            transform: scale(1);
+        }
+        .box3:hover .blue{
+            transform: scale(1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <img src="https://picsum.photos/300/300?random=1">
+            <img src="https://picsum.photos/300/300?random=2" class="images">
+        </div>
+        <div class="box2">
+            <h1>Hello</h1>
+        </div>
+        <div class="box3">
+            <img src="https://picsum.photos/300/300?random=1">
+            <div class="overlay red"></div>
+            <div class="overlay blue"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

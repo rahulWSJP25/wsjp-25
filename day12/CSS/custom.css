@@ -1,0 +1,22 @@
+
+.middle{
+    width: 1200px;
+    height: 500px;
+    /* here height: auto; does not work */
+    border: 1px red solid;
+    margin: auto;
+}
+.left{
+    width: 250px;
+    height: auto;
+    border: 1px blue solid;
+    float: left;
+
+
+}
+.right{
+    width: 800px;
+    height: auto;
+    border: 1px black solid;
+    float: left;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav{
+            width: 1000px;
+            background-color: #34495e;
+            margin: auto;
+            font-family: Arial;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            width: 15%;
+        }
+        #menu{
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: 40px;
+            font-size: 25px;
+        }
+        /* direct child selector */
+        #menu>li:hover{
+            color: gold;
+            cursor: pointer;
+        }
+        #menu>li:hover .child{
+            opacity: 1;
+            visibility: visible;
+            top: 125px;
+        }
+        #menu>li{
+            position: relative;
+            height: 120px;
+            display: flex;
+            align-items: center;
+        }
+        .child{
+            color: white;
+            width: 110px;
+            position: absolute;
+            background-color: #3498db;
+            list-style: none;
+            font-size: 18px;
+            transition: 0.5s;
+            top: 150px;
+            left: 0;
+            opacity: 0;
+            /* hides from the user */
+            visibility: hidden;
+            /* hides from the user and mouse */
+        }
+        .child>li{
+            padding: 10px 5px;
+        }
+        .child>li:hover{
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="" width="100%">
+        </div>
+        <ul id="menu">
+            <li>Home</li>
+            <li>
+                Services
+                <ul class="child">
+                    <li>
+                        Web Design
+                        <div>
+                            <ul>
+                                <li>a</li>
+                                <li>b</li>
+                                <li>c</li>
+                                <li>d</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Web Development</li>
+                    <li>SEO</li>
+                </ul>
+            </li>
+            <li>
+                Product
+                <ul class="child">
+                    <li>Product 1</li>
+                    <li>Product 2</li>
+                    <li>Product 3</li>
+                </ul>
+            </li>
+            <li>About</li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

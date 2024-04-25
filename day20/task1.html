@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .item {
+            width: 32%;
+            height: 300px;
+            border: 1px red solid;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .item:hover img {
+            transform: scale(1.2);
+            /* 
+
+            transform: scale(1); default
+            transform: scaleX() 
+            transform: scaleY()
+
+            */
+        }
+
+        .item p {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            color: white;
+            top: 0;
+            left: 0;
+            background: rgba(255, 0, 0, 0.5);
+            padding: 10px;
+            transform: scale(0.8);
+            transition: 1s;
+            opacity: 0;
+            transform-origin: top left;
+        }
+
+        .item:hover p {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=1">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, incidunt aliquid. Sequi fugiat, officia
+                laboriosam sapiente nesciunt quam repudiandae, ipsum necessitatibus laborum ex praesentium nisi, iure
+                minus tempore quasi odio.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, incidunt aliquid. Sequi fugiat, officia
+                laboriosam Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sed quia possimus laborum,
+                expedita, cupiditate labore.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=2">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=3">
+        </div>
+    </div>
+
+</body>
+
+</html>

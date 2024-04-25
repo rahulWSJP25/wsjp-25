@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{
+            width: 1000px;
+            height: 500px;
+            border: 1px red solid;
+            margin: auto;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            position: absolute;
+            /* animation: move 5s ease 2s infinite alternate-reverse; */
+            /* name ,duration ,timing-function, delay, iteration-count, direction, fill-mode; */
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+
+            /* 
+              (default) normal --> 0 to 100
+                reverse -->100 to 0
+                alternate -->0 to 100 | 100 to 0 | 0 to 100....
+                alternate-reverse -->100 to 0 | 0 to 100 | 100 to 0.... 
+            
+            */
+
+        }
+        @keyframes move{
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top: 0;
+                left: 900px;
+            }
+            50%{
+                top: 400px;
+                left: 900px;
+            }
+            75%{
+                top: 400px;
+                left: 0;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

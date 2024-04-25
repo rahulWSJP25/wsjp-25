@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .item {
+            width: 32%;
+            height: 300px;
+            border: 1px red solid;
+            overflow: hidden;
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .item:hover img {
+            transform: scale(1.2);
+            /* 
+
+            transform: scale(1.0); default
+            transform: scaleX() 
+            transform: scaleY()
+
+            */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=1">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=2">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=3">
+        </div>
+    </div>
+
+</body>
+
+</html>

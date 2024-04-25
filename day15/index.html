@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form tags</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width: 1200px;
+            border: 1px red solid;
+            padding: 20px;
+            margin: auto;
+        }
+        input,
+        label{
+            font-size: 20px;
+            padding: 5px;
+        }
+        .form-row{
+            margin: 10px 0;
+        }
+        .form-label{
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <form>
+            <div class="form-row">
+                <label class="form-label">Name</label>
+                <input type="text" name="u_name" autofocus required maxlength="20" placeholder="Please enter your name">
+                <!-- small text -->
+            </div>
+            <div class="form-row">
+                <label class="form-label">Email</label>
+                <input type="email" name="u_email" required placeholder="Please enter your email">
+            </div>
+            <div class="form-row">
+                <label class="form-label">Age</label>
+                <input type="number" name="u_age" min="18" max="35">
+            </div>
+            <div class="form-row">
+                <label class="form-label">Password</label>
+                <input type="password" name="u_password" required>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Bio</label>
+                <textarea name="Bio"></textarea>
+                <!-- large text -->
+            </div>
+            <div class="form-row">
+                <label class="form-label">Country</label>
+                <select>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BY">Belarus</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BZ">Belize</option>
+                    <option value="BJ">Benin</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BA">Bosnia and Herzegovina</option>
+                    <option value="BW">Botswana</option>
+                    <option value="BR">Brazil</option>
+                    <option value="BN">Brunei</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="BI">Burundi</option>
+                    <option value="KH">Cambodia</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="IN" selected>India</option>
+                    <option value="CA">Canada</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CO">Colombia</option>
+                    <option value="KM">Comoros</option>
+                    <option value="CD">Congo (Congo-Brazzaville)</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czechia (Czech Republic)</option>
+                    <option value="DK">Denmark</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="DO">Dominican Republic</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="EE">Estonia</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label class="form-label">DOB</label>
+                <input type="date" min="2023-11-18" max="2023-11-25">
+            </div>
+            <div class="form-row">
+                <label class="form-label">DOB time</label>
+                <input type="time">
+                <input type="datetime-local">
+                <input type="month">
+                <input type="week">
+                <input type="range">
+            </div>
+            <div class="form-row">
+                Fries<input type="checkbox">
+                Coke<input type="checkbox">
+                Roll<input type="checkbox">
+            </div>
+
+            <div class="form-row">
+                <label class="form-label">Gender</label>
+                <div>
+                    <label>Male</label>
+                    <input type="radio" name="Gender" value="M" checked>
+                    <label>Female</label>
+                    <input type="radio" name="Gender" value="F">
+                    <label>Other</label>
+                    <input type="radio" name="Gender" value="O">
+                </div>
+            </div>
+            <div class="form-row">
+                <input type="submit">
+                <input type="Reset">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

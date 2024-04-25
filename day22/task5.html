@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{
+            width: 1000px;
+            height: 500px;
+            border: 1px red solid;
+            margin: auto;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            animation: move 5s infinite;
+
+        }
+        @keyframes move{
+            0%{
+                transform: translate(0,0);
+            }
+            25%{
+                transform: translate(900px,0)rotate(90deg);
+                background-color: darkgreen;
+            }
+            50%{
+                transform: translate(900px,400px)rotate(180deg);
+                background-color: darkkhaki;
+            }
+            75%{
+                transform: translate(0,400px)rotate(270deg);
+                background-color: darkslategray;
+            }
+            100%{
+                transform: translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>
