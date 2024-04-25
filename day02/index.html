@@ -1,0 +1,42 @@
+<button onclick="somethingElse()">Click</button>
+<script>
+    function divide(a, b) {
+        return new Promise(
+            (resolve, reject) => {
+                if (a > b) {
+                    resolve(a / b);
+                } else {
+                    reject("A is lesser than b");
+                }
+            }
+        )
+    };
+
+
+    async function somethingElse() {
+        const result = await divide(14, 10);
+        console.log(result);
+        console.log("Hii");
+    };
+
+
+
+    // const result = divide(14, 10);
+    // result
+    //     .then(
+    //         (success) => {
+    //             console.log("then", success);
+    //         }
+    //     )
+    //     .catch(
+    //         (error) => {
+    //             console.log("catch", error);
+    //         }
+    //     )
+
+    // console.log('Hii');
+
+
+
+
+</script>

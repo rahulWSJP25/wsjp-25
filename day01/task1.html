@@ -1,0 +1,30 @@
+<!-- <button onclick="add()">Click Me</button> -->
+<button onclick="user.getData()">Click</button>
+<script>
+    // const add = () => {
+    //     console.log('Hii');  // This is called Arrow Function
+    // }
+
+
+    const user = {
+        uname: "Bhagirath",
+        age: 50,
+        getData: function () {
+            console.log(this);
+            window.setTimeout(
+                () => {
+                    // Will not rebind
+                    console.log(this);
+                },
+                3000
+            );
+            window.setTimeout(
+                function () {
+                    // Will rebind
+                    console.log(this);
+                },
+                4000
+            );
+        }
+    }
+</script>

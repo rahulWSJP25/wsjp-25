@@ -1,0 +1,36 @@
+<script>
+    var a = 4;
+    var b = a;
+    console.log(b);  // This is called copy 
+
+
+    // const first = ['a', 'b', 'c', 'd'];
+    // const second = first;
+    // second.push('e');
+    // console.log(first);
+    // console.log(second);
+
+    // This is called Deep-copy --->  In deep-copy, along with the data, the reference is also copied.
+
+
+    const First = ['a', 'b', 'c', 'd'];
+    const Second = [...First];    // spreading elements of First(array) into Second.
+    Second.push('e');
+    Second.push('f');
+    console.log(First);
+    console.log(Second);
+
+    // This is called Shallow-copy ---> In Shallow-copy only the data is copied.
+
+
+    const first_elem = {
+        name: "Bhagirath",
+        age: 40
+    }
+    second_elem = { ...first_elem };
+    second_elem.gender = "M";
+    console.log(first_elem);
+    console.log(second_elem);
+
+    // This spread operator is also used for an Object.
+</script>

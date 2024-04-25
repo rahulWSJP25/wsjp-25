@@ -1,0 +1,37 @@
+<script>
+    //    var , let  and const are three ways to make variables
+
+    var a = 5;
+    a = 7;      //   var can be updated
+
+
+    let b = 10;
+    b = 15;      //   let can be updated
+
+
+    const x = 100;
+    x = 25;       //   const cannot be updated
+
+    console.log(a);
+    console.log(b);
+    console.log(x);
+
+
+
+
+    {
+        var a = 11;
+        let b = 45;
+        console.log(b);  // b can be printed here
+        const c = 70;
+        console.log(c);  // c can be printed here
+    }
+    console.log(a);
+    console.log(b);
+    console.log(c);   // ReferenceError occurred (because let and const is not global variables);
+
+
+    //  var -->  Global variable
+    // let --> Local variable
+    // const --> Local variable
+</script>

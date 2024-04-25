@@ -1,0 +1,21 @@
+<script>
+    // const nums = [12, 34, 10, 56, 23, 32, 89, 80];
+    // const result = [];
+
+    // for (n of nums) {
+    //     result.push(n * 2);
+    // }
+    // console.log(result);
+
+
+
+    const nums = [12, 34, 10, 56, 23, 32, 89, 80];
+    const result = nums.map(
+        (n, i) => {
+            return `<li> ${n * 2} </li>`;
+        }
+    );
+
+    // console.log(result);
+    document.write(result.join(""));
+</script>

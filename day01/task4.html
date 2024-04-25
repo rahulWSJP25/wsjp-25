@@ -1,0 +1,21 @@
+<script>
+    // const nums = [1, 2, 4, 3, 5, 7, 12, 11, 35, 44, 70, 89, 64, 35, 38];
+    // const even = [];
+
+    // for (n of nums) {
+    //     if (n % 2 == 0) even.push(n);
+    // }
+    // console.log(even);
+
+
+
+    const nums = [1, 2, 4, 3, 5, 7, 12, 11, 35, 44, 70, 89, 64, 35, 38];
+    const even = nums.filter(
+        (n) => {
+            if (n % 2 == 0) return true;
+            else return false;
+        }
+    );
+
+    console.log(even);
+</script>
