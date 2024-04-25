@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="inp" max="10" min="1">
+    <button onclick="renderList()">Click</button>
+    <ul id="main"></ul>
+
+    <script>
+        var main = document.querySelector("#main");
+        var inp = document.querySelector("#inp");
+
+        function renderList() {
+            main.innerHTML = "";
+            var start = 0;
+            var items = inp.value;
+            var intHolder = setInterval(
+                function () {
+                    if (start == inp.value) {
+                        clearInterval(intHolder);
+                        return;
+                    }
+                    start++;
+                    var li = document.createElement("li");
+                    li.innerText = " Jai Shri Ram " + start;
+                    main.appendChild(li);
+                },
+                1000
+            )
+        }
+    </script>
+
+</body>
+
+</html>

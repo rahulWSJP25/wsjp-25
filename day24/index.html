@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent {
+            width: 1000px;
+            margin: auto;
+        }
+
+        #listBox li {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <input type="text" id="inp">
+        <button id="btn">Start</button>
+        <ul id="listBox"></ul>
+    </div>
+
+    <script>
+        var parent = document.querySelector(".parent");
+        var inp = document.querySelector("#inp");
+        var btn = document.querySelector("#btn");
+        var listBox = document.querySelector("#listBox");
+
+        btn.addEventListener(
+            "click",
+            addToList
+        )
+        inp.addEventListener(
+            "keyup",
+            function (e) {
+                if (e.key == "Enter") {
+                    addToList();
+                }
+            }
+        )
+
+        function addToList() {
+            var num = inp.value;
+            if (num.length == 0) {
+                inp.focus();
+            } else {
+                var listItem = document.createElement("li");
+                listItem.innerHTML = inp.value;
+                listBox.appendChild(listItem);
+                inp.value = "";
+                inp.focus();
+            }
+        } 
+    </script>
+</body>
+
+</html>

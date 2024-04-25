@@ -1,0 +1,24 @@
+<script>
+
+
+    //  Concept of Prime Number;
+
+    var num = prompt('Please enter a number');
+    var isPrime = true;
+
+    for (var i = 2; i < num; i++) {
+        if (num % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime == true) {
+        console.log('It is Prime Number');
+    } else {
+        console.log('It is Composite Number');
+    }
+
+
+
+</script>

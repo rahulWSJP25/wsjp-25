@@ -1,0 +1,22 @@
+<script>
+   //   Electricity related question
+
+   var units = 1500;
+   var bill = 0;
+   if (units >= 0 && units < 500) {
+      bill = bill + (units * 6);
+   } else if (units >= 500 && units < 1000) {
+      bill = bill + (units - 500) * 10 + (500 * 6);
+   } else if (units >= 1000 && units < 1500) {
+      bill = bill + (units - 1000) * 12 + (500 * 6) + (500 * 10);
+   } else if (units >= 1500 && units <= 2000) {
+      bill = bill + (units - 1500) * 15 + (500 * 6) + (500 * 10) + (500 * 12);
+   } else {
+      bill = bill + (units - 2000) * 18 + (500 * 6) + (500 * 10) + (500 * 12) + (500 * 15);
+   }
+   console.log(bill);
+
+
+
+
+</script>

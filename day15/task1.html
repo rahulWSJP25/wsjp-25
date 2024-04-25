@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .test {
+            width: 100px;
+            height: 100px;
+            border: 1px grey solid;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Keypress
+        <input type="text" class="demo" onkeypress="getData(0)">
+    </div>
+    <div>
+        keyup
+        <input type="text" class="demo" onkeyup="getData(1)">
+    </div>
+    <div>
+        keydown
+        <input type="text" class="demo" onkeydown="getData(2)">
+    </div>
+
+    <div style="margin: 40px 0;">
+        <div class="test"> Keypress</div>
+        <div class="test"> Keyup</div>
+        <div class="test"> keydown</div>
+    </div>
+
+    <script>
+
+        var demoElem = document.getElementsByClassName("demo");
+        var testElem = document.getElementsByClassName("test");
+
+        function getData(index) {
+            testElem[index].style.background = 'red';
+            setTimeout(
+                () => {
+                    testElem[index].style.background = '';
+                },
+                100
+            )
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<script>
+
+    function demo() {
+        console.log('Hii');
+        console.log('Hello');
+        return;
+        console.log('Welcome to WsCube tech in Jaipur');
+    }
+    demo();
+
+
+
+    function calc(a, b, opr) {
+        var c = 'Invalid Operator'
+        if (opr == '+') {
+            c = a + b;
+        } else if (opr == '-') {
+            c = a - b;
+        } else if (opr == '*') {
+            c = a * b;
+        } else if (opr == '/') {
+            c = a / b;
+        }
+        return c;
+    }
+
+    var res1 = calc(4, 3, "+");
+    console.log(res1);
+
+    var res2 = calc(res1, 4, "-");
+    console.log(res2);
+
+    var res3 = calc(res1, res2, "*");
+    console.log(res3);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

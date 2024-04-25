@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent {
+            width: 500px;
+            padding: 10px;
+            background-color: black;
+            color: chartreuse;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        #toggler {
+            padding: 10px;
+            cursor: pointer;
+            display: inline-block;
+            color: grey;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        #clock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            flex-wrap: wrap;
+        }
+
+        .date {
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: chartreuse !important;
+        }
+
+        #week {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body onload="clock()">
+    <div class="parent">
+        <div id="toggler">24 hrs</div>
+        <div id="clock">00:00:00</div>
+        <div id="week"></div>
+    </div>
+    <script>
+        var clockBox = document.querySelector("#clock");
+        var toggler = document.querySelector("#toggler");
+        var flag = true;  // False : 12 hrs clock and true : 24 hrs clock
+        var days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+        var week = document.querySelector("#week");
+
+        toggler.addEventListener(
+            "click",
+            function () {
+                toggler.classList.toggle("highlight");
+                flag = !flag;
+                toggler.innerText = "12 hrs";
+            }
+        )
+
+        function clock() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var wd = d.getDay();
+            week.innerText = "";
+            for (var i = 0; i < days.length; i++) {
+                var span = document.createElement("span");
+                span.innerText = days[i];
+                if (i == wd) {
+                    span.classList.add("highlight");
+                }
+                week.appendChild(span);
+            }
+
+            if (flag == false) {
+                var ampm = h > 12 ? "PM" : "AM";
+                if (h >= 12) {
+                    h = (h % 12) || 12;
+                }
+            }
+
+
+            if (h < 10) h = "0" + h;
+            if (m < 10) m = "0" + m;
+            if (s < 10) s = "0" + s;
+
+
+            clockBox.innerHTML = `${h}: ${m}:${s} <br> <span class="date"> ${d.toDateString()} </span>  ${flag ? "" : ampm}`;
+        }
+
+        setInterval(
+            clock,
+            1000
+        )
+    </script>
+</body>
+
+</html>

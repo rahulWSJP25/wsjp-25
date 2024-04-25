@@ -1,0 +1,33 @@
+<script>
+
+    // Date class--> Object
+
+    var d = new Date();   //   creating an Object
+    console.log(d.getHours());
+    console.log(d.getMinutes());
+    console.log(d.getSeconds());
+    console.log(d.getFullYear());
+    console.log(d.getDay());
+    console.log(d.getMonth());
+    console.log(d.toLocaleDateString());
+    console.log(d.toTimeString());
+    console.log(d.toLocaleTimeString());
+
+
+
+    // How to calculate age ?
+
+    var ac = new Date();   //   creating an Object
+    console.log(ac.getTime() / 365 / 24 / 60 / 60 / 1000);    // miliseconds
+
+
+    var ab = new Date("31/Dec/2003");
+    console.log(ab.getTime()/ 365 / 24 / 60 / 60 / 1000);
+
+
+    var bc = ac - ab;
+    console.log(bc / 365 / 24 / 60 / 60 / 1000);
+
+
+
+</script>

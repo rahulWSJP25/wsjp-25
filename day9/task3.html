@@ -1,0 +1,84 @@
+<script>
+    //    codes for Prime numbers between 1 to 100 ---->
+
+    for (var j = 1; j <= 100; j++) {
+        var num = j;
+        var isPrime = true;
+        for (var i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true) {
+            console.log(num);
+        }
+    }
+
+
+
+    //    find the product of all the even numbers is an Array of random numbers---->
+
+    var arr = [45, 18, 72, 36, 91, 25, 63, 14, 57, 29, 83];
+    var product = 1;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            product *= arr[i];
+        }
+    }
+    console.log(product);
+
+
+
+    //  find the sum of all the numbers which are divisible by 5 & 3 in an Array of random numbers --->
+
+    var arr = [15, 23, 30, 56, 78, 60, 57, 453, 5356, 576, 105, 675, 675, 120];
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
+            sum += arr[i];
+        }
+    }
+    console.log(sum);
+
+
+
+
+
+    //  Find the Prime Numbers from an Array of random number ---->
+
+    var num = [56, 23, 87, 15, 42, 68, 31, 95, 10, 74, 18, 60, 7, 89, 53, 29, 45, 82, 12, 37, 63, 91, 5, 70, 26];
+    for (var j = 0; j < num.length; j++) {
+        var isPrime = true;
+
+        for (var i = 2; i < num[j]; i++) {
+            if (num[j] % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true) {
+            console.log(num[j]);
+        }
+    }
+
+
+
+
+
+    //  Concept of a leap year
+
+    var num = parseInt(prompt('Please enter a number'));
+
+    if ((num % 4 == 0 && num % 100 != 0) || num % 400 == 0) {
+        console.log(num + ' is a leap year');
+    } else {
+        console.log(num + ' is not a leap year');
+    }
+
+
+
+
+
+
+</script>

@@ -1,0 +1,41 @@
+<script>
+
+    //    Write a function to print the series of numbers in between the given values from user.
+
+    function series(start, end) {
+        for (var i = start; i <= end; i++) {
+            console.log(i);
+        }
+    }
+
+    series(1, 10);
+
+
+    //  Write a function which return true if the number is prime and false if it is not.
+
+    function isPrime(n) {
+        var flag = true;
+        for (var i = 2; i < n; i++) {
+            if (n % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    var r1 = isPrime(7);
+    console.log(r1);
+
+    var r2 = isPrime(15);
+    console.log(r2);
+
+
+
+
+
+
+
+
+
+</script>

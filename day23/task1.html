@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .parent {
+      width: 1000px;
+      margin: auto;
+    }
+
+    #listBox li {
+      width: 100px;
+      height: 100px;
+      border: 1px red solid;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    #inp {
+      flex-grow: 1;
+      padding: 10px;
+      font-size: 20px;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <input type="text" id="inp">
+    <button id="btn">Start</button>
+    <ul id="listBox"></ul>
+  </div>
+
+  <script>
+    var inp = document.querySelector("#inp");
+    var listBox = document.querySelector("#listBox");
+    var btn = document.querySelector("#btn");
+    var arrayImg = [
+      "https://picsum.photos/100/100?random=1",
+      "https://picsum.photos/100/100?random=2",
+      "https://picsum.photos/100/100?random=3",
+      "https://picsum.photos/100/100?random=4",
+      "https://picsum.photos/100/100?random=5",
+      "https://picsum.photos/100/100?random=6",
+      "https://picsum.photos/100/100?random=7",
+      "https://picsum.photos/100/100?random=8",
+      "https://picsum.photos/100/100?random=9",
+      "https://picsum.photos/100/100?random=10",
+    ];
+
+    btn.addEventListener(
+      "click",
+      function () {
+        addToList();
+      }
+    );
+    inp.addEventListener(
+      "keyup",
+      function (e) {
+        if (e.key == "Enter") {
+          addToList();
+        }
+      }
+    );
+
+    function addToList() {
+      var num = parseInt(inp.value);
+      if (num >= 1 && num <= 10) {
+        listBox.innerHTML = "";
+
+
+        for (var i = 0; i < num; i++) {
+          var listItem = document.createElement("li");
+          var img = document.createElement("img");
+          img.src = arrayImg[i];
+          listItem.appendChild(img);
+
+          listBox.appendChild(listItem);
+        }
+
+        inp.value = "";
+        inp.focus();
+      } else {
+        inp.focus();
+      }
+    }
+  </script>
+</body>
+
+</html>

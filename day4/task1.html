@@ -1,0 +1,72 @@
+<script>
+   var shop1 = false;
+   var shop2 = true;
+   var shop3 = false;
+
+   if(shop1 == true){
+    console.log('Go to shop1');
+   }else if(shop2 == true){
+    console.log('Go to shop2');
+   }else if(shop3 == true){
+    console.log('Go to shop3');
+   }else{
+    console.log('Go home');
+   }
+
+   // Range type
+
+   var num = prompt('Please enter a number');
+   // 0 - 10;
+   if(num >= 0 && num <= 10){
+      console.log('In range');
+   }else{
+      console.log('Out of range');
+   }
+
+
+   // Range type
+
+   var num = prompt('Please enter a number');
+   // 0 - 10;
+   if(num > 0){
+      console.log('+ive');
+   }else if(num < 0){
+      console.log('-ive');
+   }else{
+      console.log('Zero');
+   }
+
+
+   //  Marksheet type
+   
+   var m1 = 40;
+   var m2 = 70;
+   var m3 = 80;
+   var m4 = 90;
+   var m5 = 100;
+
+   var total = m1 + m2 + m3 + m4 + m5;
+   console.log(total);
+
+   var per = (total/500)*100;
+   console.log(per);
+
+   if(per > 70){
+      console.log('A+');
+   }else if(per <= 70 && per > 50){
+      console.log('A');
+   }else if(per <= 50 && per > 33){
+      console.log('B');
+   }else{
+      console.log('Fail');
+   }
+   
+
+
+
+
+
+
+
+
+</script>

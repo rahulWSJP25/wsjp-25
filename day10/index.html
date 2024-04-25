@@ -1,0 +1,85 @@
+<script>
+
+
+    // From an array of 20 names , collection the indexes of those names whose length is more than 15 chars;
+
+    var names = [
+        "Alexander",
+        "Isabel",
+        "ChristopherNicholqwert",
+        "Elizabeth",
+        "Jona",
+        "MadisonElijah",
+        "VictoriaBenjamin",
+        "NathanielKatherine",
+        "AbigailAlexander",
+        "BenjaminGabriella",
+        "OliverPenelope",
+        "CharlotteMatthew",
+        "Jennifer",
+        "Scarlett",
+        "LillianChristopher",
+        "William",
+        "EleanorHarrison",
+        "Victoria",
+        "GabriellaZachariah",
+        "MackenzieHarrison"
+    ];
+
+    var d = [];
+    for (var i = 0; i < names.length; i++) {
+        var len = names[i].length - 1;
+        if (len >= 15) {
+            d.push(i);
+        }
+    }
+    console.log(d);
+
+
+
+
+    //  From an array of random numbers, collect those numbers in an array which are neither divisible by 3 nor by 5;
+
+    var number = [7, 42, 15, 23, 8, 56, 31, 12, 5, 19, 37, 64, 2, 29, 50];
+    var collect = [];
+    for (n of number) {
+        if (n % 3 != 0 && n % 5 != 0) {
+            // console.log(n);
+            collect.push(n);
+        }
+    }
+    console.log(collect);
+
+
+    // From an array of random numbers, collect those numbers in an array which are non-prime(composite);
+
+    var numbers = [7, 42, 15, 23, 8, 56, 31, 12, 5, 19, 37, 64, 2, 29, 50];
+
+    var dataCollect = [];
+    for (var n of numbers) {
+        var isPrime = true;
+        for (var i = 2; i < n; i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == false) {
+            // console.log(n);
+            dataCollect.push(n);
+        }
+    }
+    console.log(dataCollect);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

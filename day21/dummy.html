@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .parent{
+            width: 500px;
+            height: 600px;
+            padding: 15px;
+            border: 1px red solid;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            border: 1px black solid;
+            padding: 15px;
+        }
+        .child1{
+            width: 100%;
+            height: 40%;
+            margin: 20px 0;
+            border: 1px blue solid;
+        }
+        .child2{
+            width: 100%;
+            height: 40%;
+            margin: 20px 0;
+            border: 1px blue solid;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="box">
+            <div class="child1"></div>
+            <div class="child2"></div>
+        </div>
+    </div>
+
+    <script>
+        var child1 = document.querySelector(".child1");
+        child1.nextElementSibling.style.background = 'red';
+
+        var child2 = document.querySelector(".child2");
+        child2.previousElementSibling.style.borderColor = "magenta";
+
+        var parent = document.querySelector(".parent");
+        parent.children[0].children;
+
+        var child1 = document.querySelector(".child1");
+        child1.parentNode.children[0];
+    </script>
+    
+</body>
+</html>

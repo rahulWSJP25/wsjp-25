@@ -1,0 +1,68 @@
+<script>
+
+
+    // 1)  Write a function which takes an array and returns the reverse of that.
+
+
+    function revArr(arr) {
+        var rev = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            rev.push(arr[i]);
+        }
+        return rev;
+    }
+
+    var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var revA = revArr(a);
+    console.log(revA);
+
+    var names = ['Bhagirath', 'Anjali', 'Nikita', 'Anil', 'Sanjay'];
+    var revNames = revArr(names);
+    console.log(revNames);
+
+
+
+    // 2) Write a function which takes up an array of random numbers and returns the sum of that.
+
+    function sum(numbers) {
+        var total = 0;
+        for (n of numbers) {
+            total += n;
+        }
+        return total;
+    }
+
+    var a = [1, 3, 5, 7, 4, 56, 3, 4, 7, 8, 65, 456, 34, 542, 34, 436, 57];
+    var res = sum(a);
+    console.log(res);
+
+    var b = [100, 300, 500, 300, 600];
+    var res1 = sum(b);
+    console.log(res1);
+
+
+    //    3) Write a function to return the factorial of a given number.
+
+    function fact(n) {
+        var f = 1;
+        for (var i = 1; i <= n; i++) {
+            f *= i;
+        }
+        return f;
+    }
+
+    var res = fact(5);
+    console.log(res);
+
+    var res1 = fact(10);
+    console.log(res1);
+
+    var res2 = fact(7);
+    console.log(res2);
+
+
+
+
+
+
+</script>
