@@ -1,0 +1,26 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Introduction to Machine Learning",
+        "author": "John Doe",
+        "date": "2024-04-01",
+        "content": "Machine learning is a branch of artificial intelligence (AI) that focuses on building systems that can learn from and make decisions based on data. It involves the development of algorithms and models that allow computers to perform tasks without being explicitly programmed for those tasks. Machine learning techniques are widely used in various fields, including healthcare, finance, marketing, and more."
+      },
+      {
+        "id": 2,
+        "title": "The Basics of Python Programming",
+        "author": "Jane Smith",
+        "date": "2024-03-25",
+        "content": "Python is a versatile programming language that is known for its simplicity and readability. It is widely used in various domains, including web development, data science, artificial intelligence, and more. In this post, we will cover the basics of Python programming, including data types, control structures, functions, and more."
+      },
+      {
+        "id": 3,
+        "title": "Understanding Blockchain Technology",
+        "author": "David Johnson",
+        "date": "2024-03-18",
+        "content": "Blockchain is a decentralized and distributed ledger technology that underlies cryptocurrencies like Bitcoin. It allows for secure and transparent peer-to-peer transactions without the need for intermediaries. In this post, we will explore the fundamentals of blockchain technology, including how it works, its benefits and challenges, and its potential applications beyond cryptocurrencies."
+      }
+    ]
+  }
+  

@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.skeleton-loader {
+  width: 100%;
+  padding: 10px; /* Adjust padding as needed */
+  background-color: #f0f0f0; /* Light gray background color */
+  margin-bottom: 20px; /* Spacing between each loader */
+}
+
+.skeleton-item {
+  width: 100%;
+  height: 20px; /* Adjust height as needed */
+  background-color: #e0e0e0; /* Slightly darker gray background color */
+  margin-bottom: 10px; /* Spacing between each item */
+}
+
+/* Animation effect */
+.skeleton-loader:nth-child(odd) .skeleton-item {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
